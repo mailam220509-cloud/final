@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS High-Intensity Dashboard 2026</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              750: '#1e293b',
+              850: '#111827',
+              950: '#030712',
+            },
+            ielts: '#10b981', 
+            math: '#6366f1',  
+            dgnl: '#f59e0b',  
+            rest: '#ec4899'   
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #111827; }
+    ::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="p-2 bg-gradient-to-br from-emerald-500 to-indigo-600 rounded-xl shadow-lg shadow-indigo-500/10">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-lg font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">IELTS CAO ĐỘ 2026</h1>
+          <p class="text-xs text-slate-400 font-medium tracking-wide">CHIẾN LƯỢC TỐI ƯU HÓA LỘ TRÌNH TÍCH HỢP</p>
+        </div>
+      </div>
+      
+      <!-- NAV TABS -->
+      <nav class="flex space-x-1 bg-slate-950 p-1 rounded-xl border border-slate-800">
+        <button onclick="switchTab('overview')" id="btn-tab-overview" class="px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200">Tổng Quan</button>
+        <button onclick="switchTab('roadmap')" id="btn-tab-roadmap" class="px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200">Lộ Trình 6 Tuần</button>
+        <button onclick="switchTab('schedules')" id="btn-tab-schedules" class="px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200">Thời Gian Biểu</button>
+        <button onclick="switchTab('export')" id="btn-tab-export" class="px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 flex items-center space-x-1">
+          <span>Xuất Lịch Google</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- TAB 1: OVERVIEW -->
+    <section id="tab-overview" class="space-y-8 hidden">
+      <div class="relative bg-gradient-to-br from-slate-900 to-slate-850 p-6 sm:p-8 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
+        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -left-10 -top-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-4">Hệ thống Quản lý Tải nhận thức</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">Chiến lược Tối ưu hóa Lộ trình Luyện thi IELTS Cao độ Kết hợp Chương trình Phổ thông và ĐGNL</h2>
+          <p class="mt-3 text-slate-400 leading-relaxed text-sm sm:text-base">Thiết kế hệ thống cá nhân hóa hiệu suất cao dành cho thí sinh từ ngày <span class="text-white font-semibold">03/06 đến 15/07/2026</span>. Ứng dụng mô hình phân phối ngắt quãng nhằm giải quyết triệt để khối lượng học liệu khổng lồ của Kiên Luyện.</p>
+        </div>
+      </div>
+
+      <!-- Ma trận phân bổ vector trọng số -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Cơ sở Khoa học định lượng</h3>
+            <p class="text-xs text-slate-400 mb-6">Véc-tơ chuẩn hóa phân bổ tài nguyên nhận thức và quỹ thời gian cốt lõi tự học:</p>
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-center relative py-6 shadow-inner">
+              <div class="text-emerald-400 text-sm font-bold mb-2">W⃗_Tối_Ưu</div>
+              <div class="inline-block text-left text-xs text-slate-300 border-l-2 border-r-2 border-slate-500 px-3 py-1">
+                [ IELTS: 0.70 ] <br>
+                [ Toán: &nbsp;0.20 ] <br>
+                [ ĐGNL: &nbsp;0.05 ] <br>
+                [ PhổThông: 0.05 ]
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 p-3 bg-indigo-500/5 border border-indigo-500/10 rounded-xl text-xs text-indigo-300 leading-relaxed">
+            💡 Tỷ lệ vàng đảm bảo sự hội tụ năng lượng vào mục tiêu tối thượng IELTS (70%) nhưng không gây đứt gãy mạch kiến thức bổ trợ.
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 bg-slate-900 p-6 rounded-2xl border border-slate-800 overflow-x-auto">
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Ma Trận Trọng Số Các Cấu Phần</h3>
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="border-b border-slate-800 text-slate-400 font-semibold">
+                <th class="pb-3">Danh Mục Học Tập</th>
+                <th class="pb-3 text-center">Trọng Số</th>
+                <th class="pb-3">Quỹ Ngày Thường</th>
+                <th class="pb-3">Quỹ Thứ Bảy</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/50">
+              <tr>
+                <td class="py-3.5 font-bold flex items-center space-x-2 text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  <span>IELTS Core Skills</span>
+                </td>
+                <td class="py-3.5 text-center font-mono font-bold">70%</td>
+                <td class="py-3.5 text-slate-300 font-mono">240 - 270 phút</td>
+                <td class="py-3.5 text-emerald-400 font-mono font-semibold">420 phút</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 font-bold flex items-center space-x-2 text-indigo-400">
+                  <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                  <span>Toán học thêm</span>
+                </td>
+                <td class="py-3.5 text-center font-mono font-bold">20%</td>
+                <td class="py-3.5 text-slate-300 font-mono">60 - 90 phút</td>
+                <td class="py-3.5 text-slate-300 font-mono">120 phút</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 font-bold flex items-center space-x-2 text-amber-400">
+                  <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                  <span>Đánh giá Năng lực</span>
+                </td>
+                <td class="py-3.5 text-center font-mono font-bold">5%</td>
+                <td class="py-3.5 text-slate-300 font-mono">20 - 30 phút</td>
+                <td class="py-3.5 text-slate-300 font-mono">30 phút</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 font-bold flex items-center space-x-2 text-pink-400">
+                  <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+                  <span>Học chính khóa</span>
+                </td>
+                <td class="py-3.5 text-center font-mono font-bold">5%</td>
+                <td class="py-3.5 text-slate-300 font-mono">20 - 30 phút</td>
+                <td class="py-3.5 text-slate-300 font-mono">30 phút</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Khối phục hồi hệ thống thần kinh -->
+      <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-6">Hệ thống phục hồi sinh học & Chống kiệt sức</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-pink-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-pink-400 font-mono bg-pink-500/10 px-2 py-0.5 rounded">04:30 - 04:45</span>
+              <span class="text-xs text-slate-500 font-semibold">15 Phút</span>
+            </div>
+            <h4 class="font-bold text-white group-hover:text-pink-400 transition-colors">Thiền định phục hồi đầu ngày</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">Kích hoạt sóng não Alpha, giải tỏa lo âu định hình tâm thế tập trung cực đại cho ca học đầu ngày.</p>
+          </div>
+
+          <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-indigo-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-indigo-400 font-mono bg-indigo-500/10 px-2 py-0.5 rounded">17:15 - 17:30</span>
+              <span class="text-xs text-slate-500 font-semibold">15 Phút</span>
+            </div>
+            <h4 class="font-bold text-white group-hover:text-indigo-400 transition-colors">Vận động thể chất giải áp</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">Cardio hoặc giãn cơ cường độ vừa phải nhằm bơm máu lên não bộ, đập tan trì trệ sau khối giờ tự học căng thẳng.</p>
+          </div>
+
+          <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-emerald-500/30 transition-all group">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/10 px-2 py-0.5 rounded">23:00 - 23:30</span>
+              <span class="text-xs text-slate-500 font-semibold">30 Phút</span>
+            </div>
+            <h4 class="font-bold text-white group-hover:text-emerald-400 transition-colors">Tích hợp tiềm thức cuối ngày</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">Tổng hợp Collocations cốt lõi, ghi chú nhật ký lỗi sai dựa trên nguyên lý củng cố trí nhớ dài hạn (Memory Consolidation).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: LỘ TRÌNH 6 TUẦN -->
+    <section id="tab-roadmap" class="hidden space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
+        <div>
+          <h3 class="text-base font-bold text-white">Ma Trận Tiến Độ Đường Dài</h3>
+          <p class="text-xs text-slate-400">Phân rã khoa học 60 Videos Writing & 50 Videos Speaking của Kiên Luyện</p>
+        </div>
+        <div class="flex space-x-2 text-xs">
+          <button onclick="filterRoadmap('all')" id="filter-all" class="px-3 py-1.5 rounded-lg transition-all">Tất cả</button>
+          <button onclick="filterRoadmap('task1')" id="filter-task1" class="px-3 py-1.5 rounded-lg transition-all">Trọng tâm Task 1</button>
+          <button onclick="filterRoadmap('task2')" id="filter-task2" class="px-3 py-1.5 rounded-lg transition-all">Trọng tâm Task 2</button>
+        </div>
+      </div>
+
+      <div id="roadmap-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- TAB 3: THỜI GIAN BIỂU -->
+    <section id="tab-schedules" class="hidden space-y-6">
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-3">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Chọn Giai Đoạn Chiến Dịch</span>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="switchSchedulePhase(1)" id="btn-phase-1" class="px-4 py-2 text-xs font-bold rounded-lg transition-all duration-200">GĐ 1: Thiết lập nền tảng (03/06 - 13/06)</button>
+          <button onclick="switchSchedulePhase(2)" id="btn-phase-2" class="px-4 py-2 text-xs font-bold rounded-lg transition-all duration-200">GĐ 2: Đua top du lịch (13/06 - 19/06)</button>
+          <button onclick="switchSchedulePhase(3)" id="btn-phase-3" class="px-4 py-2 text-xs font-bold rounded-lg transition-all duration-200">GĐ 3: Tăng tốc về đích (20/06 - 15/07)</button>
+        </div>
+      </div>
+
+      <div id="schedule-day-tabs" class="flex flex-wrap gap-2 bg-slate-900 p-2 rounded-xl border border-slate-800">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+        <div id="timeline-title" class="mb-6 font-bold text-base text-slate-300 border-l-4 border-emerald-500 pl-3"></div>
+        <div class="relative border-l-2 border-slate-800 ml-4 pl-6 space-y-6" id="timeline-content">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: EXPORT -->
+    <section id="tab-export" class="hidden space-y-6">
+      <div class="max-w-2xl mx-auto bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-2xl text-center space-y-6">
+        <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-xl font-extrabold text-white">Xuất Lịch Tích Hợp Tự Động sang Google Calendar</h3>
+          <p class="text-sm text-slate-400 max-w-md mx-auto">Hệ thống sẽ biên dịch toàn bộ dòng thời gian của cả 3 Giai đoạn từ ngày 03/06 đến 15/07/2026 thành file chuẩn hóa iCalendar (.ics).</p>
+        </div>
+
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-left space-y-2 text-xs text-slate-400 font-mono">
+          <div class="text-slate-300 font-semibold mb-1">🔍 Cấu hình quy tắc đồng bộ tự động:</div>
+          <div>• Phase 1 (03/06 - 13/06): Tích hợp đầy đủ Toán & Học Thêm ĐGNL tối.</div>
+          <div>• Phase 2 (13/06 - 19/06): Tự động giảm tải Ca Viết nặng khi Du Lịch, giữ dòng phản xạ nói và Zoom ĐGNL tối.</div>
+          <div>• Phase 3 (20/06 - 15/07): Tăng tốc tối đa kèm chèn lớp Chính Khóa (T3, T5 sáng).</div>
+        </div>
+
+        <div>
+          <button onclick="handleExportICS()" class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/20 transition-all inline-flex items-center space-x-2">
+            <span>Tạo Tệp Lịch Học (.ics)</span>
+          </button>
+        </div>
+
+        <div id="export-success-container" class="hidden bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 text-left">
+          <p class="text-sm font-bold text-emerald-400" id="export-success-msg"></p>
+          <div class="mt-3 text-xs text-slate-400 space-y-1">
+            <p class="font-semibold text-slate-300">💡 Hướng dẫn nạp lịch nhanh chóng:</p>
+            <p>1. Truy cập <a href="https://calendar.google.com" target="_blank" class="text-emerald-400 underline">Google Calendar</a> trên máy tính.</p>
+            <p>2. Nhấn vào biểu tượng bánh răng <span class="text-white font-semibold">Cài đặt -> Nhập và xuất</span>.</p>
+            <p>3. Chọn tệp vừa tải về máy và chọn Lịch mong muốn của bạn để hoàn tất đồng bộ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-slate-900 bg-slate-950 py-4 text-center text-xs text-slate-500 font-medium">
+    &copy; 2026 IELTS Intensive Strategic Tracker. Designed for High Performance. Lam.
+  </footer>
+
+  <!-- SCRIPT ENGINE -->
+  <script>
+    // DATA DATABASE COMPLETE
+    const roadmapData = [
+      { week: 1, dates: '03/06 - 09/06', type: 'task1', wt1: '12 Videos (Task 1: Line, Bar Graph)', wp: '6 Bài viết thực hành chi tiết', st: '10 Videos cấu trúc phản xạ', sm: 'Tập 1 + Lean Vocab Volume 1', test: "2 bài kiểm tra nhanh 15 phút (T3, T5); 1 bài Milestone 45 phút (T7); 1 Đề thi thử Full Test (CN)" },
+      { week: 2, dates: '10/06 - 16/06', type: 'task1', wt1: '6 Videos (Task 1: Table, Pie Chart)', wp: '3 Bài viết thực hành trước du lịch', st: '8 Videos chủ đề đời sống', sm: 'Tập 2 + Lean Vocab Volume 2', test: "Giảm tải đi du lịch từ ngày 13/06; chỉ duy trì luyện nói phản xạ ngắn và nạp cụm từ thông dụng hằng ngày" },
+      { week: 3, dates: '17/06 - 23/06', type: 'task1', wt1: '6 Videos (Task 1: Mixed, Map, Process)', wp: '3 Bài viết thực hành phục hồi tốc độ', st: '8 Videos phương pháp nâng cao', sm: 'Tập 3 + Lean Vocab Volume 3', test: "Kết thúc du lịch ngày 19/06. 1 bài 15 phút (T5); 1 bài Milestone 45 phút (T7); 1 Full Đề mẫu hoàn chỉnh (CN)" },
+      { week: 4, dates: '24/06 - 30/06', type: 'task2', wt1: '12 Videos (Task 2: Agree or Disagree)', wp: '6 Bài luận văn nghị luận chuyên sâu', st: '8 Videos triển khai ý tưởng nhanh', sm: 'Tập 4 + Lean Vocab Volume 4', test: "2 bài kiểm tra nhanh 15 phút (T3, T5); 1 bài Milestone 45 phút (T7); 1 Đề thi thử Full Test (CN)" },
+      { week: 5, dates: '01/07 - 07/07', type: 'task2', wt1: '12 Videos (Task 2: Advantages/Disadvantages, Problem & Solution)', wp: '6 Bài luận phân tích giải pháp phức tạp', st: '8 Videos từ vựng học thuật cao cấp', sm: 'Tập 5 + Lean Vocab Volume 5', test: "2 bài kiểm tra nhanh 15 phút (T3, T5); 1 bài Milestone 45 phút (T7); 1 Đề thi thử Full Test (CN)" },
+      { week: 6, dates: '08/07 - 15/07', type: 'task2', wt1: '12 Videos (Task 2: Two-part Question & Tổng duyệt toàn diện)', wp: '6 Bài luyện tập tốc độ cao phòng thi', st: '8 Videos mô phỏng phòng thi thật', sm: 'Tập 6 + Lean Vocab Volume 6', test: "2 bài kiểm tra nhanh 15 phút (T3, T5); Tổng kiểm duyệt toàn bộ hệ thống nhật ký lỗi sai chuẩn bị thi" }
+    ];
+
+    let activeSchedulePhase = 1;
+
+    const timelineData = {
+      phase1: {
+        t235: {
+          title: "Khung thời gian Giai đoạn 1: Thứ Hai - Thứ Tư - Thứ Sáu (Nền tảng & Kỷ luật sắt - Có học thêm Toán tối)",
+          blocks: [
+            { time: "04:30 - 04:45", tag: "rest", title: "Thiền định phục hồi đầu ngày", desc: "Thực hành thở sâu, tối ưu hóa năng lượng sóng não Alpha tinh khiết." },
+            { time: "04:45 - 06:15", tag: "ielts", title: "IELTS Block 1 (Writing Task 1 Theory)", desc: "Xem và ghi chép chi tiết logic của 2 videos bài giảng Writing Task 1 (tập trung Biểu đồ đường, cột)." },
+            { time: "06:15 - 07:15", tag: "ielts", title: "IELTS Block 2 (Speaking & Vocab)", desc: "Học 1 video Speaking hằng ngày + thực hành 5 trang sách mẫu. Thuộc lòng 10 collocations Lean Vocab Vol 1." },
+            { time: "07:45 - 11:30", tag: "math", title: "Khối tự học chuyên sâu Toán & ĐGNL", desc: "Dành 45 phút hoàn thành bài tập Toán học thêm và 30 phút nghiên cứu sâu tài liệu ĐGNL ngày mới." },
+            { time: "11:30 - 13:30", tag: "rest", title: "Nghỉ ngơi phục hồi thể lực", desc: "Ăn trưa và ngủ trưa bắt buộc từ 20-30 phút để giải phóng dung lượng nhận thức bộ não." },
+            { time: "13:30 - 15:00", tag: "ielts", title: "IELTS Block 3 (Writing Practice Task 1)", desc: "Thực hành viết nháp hoàn chỉnh bài viết biểu đồ dựa trên dữ liệu lý thuyết sáng sớm." },
+            { time: "15:00 - 15:45", tag: "ielts", title: "IELTS Block 4 (Dictation & Auditory Memory)", desc: "Luyện nghe chép chính tả tinh chỉnh ngữ điệu, ghi nhận từ vựng trực tiếp từ các tài liệu bài nghe." },
+            { time: "15:45 - 17:15", tag: "math", title: "Học thuật toán học thêm chuyên sâu", desc: "Xử lý triệt để và làm sạch khối bài tập nâng cao đại số/hình học chuẩn bị cho lớp trực tiếp tối." },
+            { time: "17:15 - 17:30", tag: "rest", title: "Vận động cơ thể kích hoạt", desc: "Cardio hoặc kéo giãn cơ nhẹ nhàng kích thích bơm máu tươi lên não bộ." },
+            { time: "19:00 - 21:00", tag: "math", title: "Lớp học thêm Toán trực tiếp", desc: "Tập trung tối đa nghe bài giảng offline trực tiếp, hấp thụ tư duy giải đề nhanh của giáo viên." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom", desc: "Học trực tiếp chuyên đề logic toán định lượng/định tính tích hợp phức tạp." },
+            { time: "23:00 - 23:30", tag: "rest", title: "Tích hợp tiềm thức cuối ngày", desc: "Rà soát lại toàn bộ collocations và nhật ký lỗi sai tích lũy trong ngày rồi đi ngủ sâu." }
+          ]
+        },
+        t35: {
+          title: "Khung thời gian Giai đoạn 1: Thứ Ba - Thứ Năm (Tự học cao độ - Chưa học chính khóa sáng)",
+          blocks: [
+            { time: "04:30 - 04:45", tag: "rest", title: "Thiền định phục hồi đầu ngày", desc: "Giải tỏa căng thẳng, khởi động tinh thần tập trung cực đại." },
+            { time: "04:45 - 06:15", tag: "ielts", title: "IELTS Block 1 (Writing & Vocab Theory)", desc: "Nạp sâu lý thuyết biểu đồ tĩnh/động kết hợp nạp collocations cấu trúc học thuật." },
+            { time: "06:15 - 07:15", tag: "ielts", title: "IELTS Block 2 (Daily Dictation & Error Review)", desc: "Nghe chép chính tả đều đặn kết hợp rà soát sâu các lỗi sai kinh điển từ bài test." },
+            { time: "07:45 - 11:30", tag: "math", title: "Khối tự học nâng cao", desc: "Thời gian trống lớn ban ngày được dùng để dứt điểm bài tập lớn môn Toán và nghiên cứu học liệu ĐGNL." },
+            { time: "11:30 - 13:30", tag: "rest", title: "Nghỉ ngơi phục hồi thể lực", desc: "Ăn trưa dinh dưỡng và ngủ trưa sâu giải tỏa mệt mỏi." },
+            { time: "13:30 - 14:30", tag: "ielts", title: "Hệ thống kiểm tra ngắn (15-Minute Flash Tests)", desc: "Kiểm tra phản xạ nhanh viết Introduction/Overview & Phản xạ nói Speaking Part 1 ghi âm trực tiếp." },
+            { time: "14:30 - 16:00", tag: "ielts", title: "IELTS Block 3 (Speaking Practice)", desc: "Luyện tập 5 trang sách mẫu Kiên Luyện kết hợp ứng dụng collocations biến đổi câu linh hoạt." },
+            { time: "16:00 - 17:15", tag: "dgnl", title: "Tự học chuyên đề bổ trợ ĐGNL", desc: "Tự giải đề, đọc tài liệu lý thuyết nền tảng chuẩn bị cho ca tương tác tối." },
+            { time: "19:30 - 21:00", tag: "math", title: "Học thuật toán học thêm", desc: "Giải quyết dứt điểm các bài toán hình học không gian khó nhằn tồn đọng." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom", desc: "Tương tác giải đề tích hợp phức tạp cùng giáo viên qua Zoom hằng ngày." },
+            { time: "23:00 - 23:30", tag: "rest", title: "Tích hợp tiềm thức cuối ngày", desc: "Hệ thống hóa danh mục hành động lỗi sai, lưu trữ thông tin dài hạn." }
+          ]
+        },
+        t7: {
+          title: "Khung thời gian Giai đoạn 1: Thứ Bảy (Khung tự học tự do lớn nhất - Ngày bản lề bứt phá)",
+          blocks: [
+            { time: "04:45 - 07:45", tag: "ielts", title: "IELTS Block 1 (Weekly Full Test)", desc: "Giải quyết trọn vẹn 1 đề Listening & Reading nghiêm túc dưới áp lực phòng thi thực tế." },
+            { time: "08:30 - 11:30", tag: "ielts", title: "IELTS Block 2 (Deep Error Analysis & Vocab Extraction)", desc: "Dành ra 60 phút nghe lại những câu sai, mổ xẻ bẫy paraphrase và ghi chú cụm từ mới vào sổ tay." },
+            { time: "13:30 - 15:30", tag: "math", title: "Học thuật toán nâng cao tuần", desc: "Hoàn tất toàn bộ khối bài tập lớn chuẩn bị cho chu kỳ tuần kế tiếp." },
+            { time: "15:30 - 17:15", tag: "ielts", title: "IELTS Block 3 (45-Minute Milestone Test)", desc: "Luyện viết Full Task 1 chất lượng cao dưới áp lực thời gian + Mock Test Speaking ghi âm 3 Parts." },
+            { time: "19:30 - 21:00", tag: "ielts", title: "IELTS Block 4 (Shadowing & Speaking Correction)", desc: "Nghe lại file ghi âm bài nói buổi chiều để tự bắt lỗi phát âm, từ nối và độ trôi chảy." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom", desc: "Tham gia buổi thực hành giải đề tổng hợp cao độ cuối tuần." }
+          ]
+        },
+        cn: {
+          title: "Khung thời gian Giai đoạn 1: Chủ Nhật (Bận các lớp học thêm cố định - Giảm tải tự học)",
+          blocks: [
+            { time: "04:45 - 06:15", tag: "ielts", title: "IELTS Block 1 (Vocab & Dictation Maintenance)", desc: "Ôn tập nhanh 20 từ vựng cốt lõi trong tuần, chép chính tả ngắn duy trì nhịp điệu phản xạ âm thanh." },
+            { time: "07:15 - 17:15", tag: "rest", title: "Lớp học thêm trực tiếp (Học offline Toán/Văn/Anh cả ngày)", desc: "Lắng nghe bài giảng trên lớp tập trung cao độ, chú ý đan xen ăn uống, nghỉ trưa hồi sức giữa các ca học." },
+            { time: "19:30 - 21:00", tag: "dgnl", title: "Chuẩn bị học liệu ĐGNL tuần mới", desc: "Đọc trước tài liệu nền tảng nhằm tối ưu hóa khả năng hấp thụ trong các ca Zoom tuần kế tiếp." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom", desc: "Tham gia đầy đủ ca học tối cuối tuần đảm bảo tiến trình kiến thức liên tục." }
+          ]
+        }
+      },
+      phase2: {
+        daily: {
+          title: "Khung thời gian Giai đoạn 2: Lịch trình Hằng Ngày khi đi Du Lịch (Cắt giảm viết nặng - Giữ phản xạ nói & Từ vựng)",
+          blocks: [
+            { time: "05:00 - 05:45", tag: "ielts", title: "IELTS Block 1 (Lean Vocab Vol 2 Economics & Daily Dictation)", desc: "Dành 45 phút sáng sớm yên tĩnh ôn tập 10 từ vựng chủ đề Kinh tế kết hợp luyện nghe chép chính tả nhanh duy trì dòng chảy ngôn ngữ." },
+            { time: "05:45 - 17:00", tag: "rest", title: "Hoạt động Du lịch & Gắn kết gia đình toàn vẹn", desc: "Hoàn toàn xả stress, hồi phục hệ thần kinh, tham gia các hoạt động vui chơi cùng người thân. Cắt giảm hoàn toàn các ca viết luận nặng đô." },
+            { time: "17:00 - 17:45", tag: "ielts", title: "IELTS Block 2 (Shadowing & Speaking Part 2 Recording)", desc: "Dành 45 phút chiều muộn tại phòng nghỉ để luyện nói nói đuổi (shadowing) và ghi âm câu trả lời theo các chủ đề Speaking có sẵn trong sách." },
+            { time: "17:45 - 21:30", tag: "rest", title: "Ăn tối cùng gia đình & Thư giãn tự do", desc: "Thưởng thức ẩm thực vùng miền, tái tạo năng lượng tinh thần thoải mái." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom cố định", desc: "Giữ vững kỷ luật thép: Tham gia đầy đủ phòng học trực tuyến Zoom để nắm bắt kịp thời mạch bài giảng chuyên đề logic tích hợp cùng giáo viên." },
+            { time: "23:00 - 23:30", tag: "rest", title: "Tích hợp tiềm thức & Ngủ ngon phục hồi", desc: "Ghi chú nhanh vài lỗi sai từ ca học tối và đi ngủ sớm, bảo toàn năng lượng." }
+          ]
+        }
+      },
+      phase3: {
+        t235: {
+          title: "Khung thời gian Giai đoạn 3: Thứ Hai - Thứ Tư - Thứ Sáu (Cao độ tự học & Học thêm toán tối)",
+          blocks: [
+            { time: "04:30 - 04:45", tag: "rest", title: "Thiền định phục hồi đầu ngày", desc: "Thực hành thở sâu sâu, tối ưu hóa năng lượng sóng não Alpha." },
+            { time: "04:45 - 06:15", tag: "ielts", title: "IELTS Block 1 (Writing Theory)", desc: "Xem và xử lý sâu tư duy lý thuyết nghị luận xã hội của 2 videos bài giảng Writing Task 2." },
+            { time: "06:15 - 07:15", tag: "ielts", title: "IELTS Block 2 (Speaking & Vocab)", desc: "Học 1 video Speaking + 5 trang sách mẫu. Nạp 10 collocations chủ đề nâng cao Lean Vocab Vol 3-6." },
+            { time: "07:45 - 11:30", tag: "math", title: "Khối tự học chuyên sâu Toán & ĐGNL", desc: "Giải quyết bài tập nâng cao từ lớp học thêm trực tiếp, dứt điểm bài tập lớn môn toán." },
+            { time: "11:30 - 13:30", tag: "rest", title: "Nghỉ ngơi phục hồi thể lực", desc: "Ăn trưa và ngủ trưa bắt buộc từ 20-30 phút." },
+            { time: "13:30 - 15:00", tag: "ielts", title: "IELTS Block 3 (Writing Practice)", desc: "Thực hành viết 1 bài luận Task 2 hoàn chỉnh dựa trên cấu trúc đã học sáng." },
+            { time: "15:00 - 15:45", tag: "ielts", title: "IELTS Block 4 (Dictation & Shadowing)", desc: "Nghe chép chính tả tinh chỉnh ngữ điệu tự nhiên." },
+            { time: "15:45 - 17:15", tag: "math", title: "Học thuật toán học thêm chuyên sâu", desc: "Xử lý khối bài tập đại số hoặc hình học không gian khó từ lớp trực tiếp." },
+            { time: "17:15 - 17:30", tag: "rest", title: "Vận động cơ thể kích hoạt", desc: "Cardio hoặc bài tập kéo giãn cơ nhẹ nhàng." },
+            { time: "19:00 - 21:00", tag: "math", title: "Lớp học thêm Toán trực tiếp", desc: "Tập trung nghe giảng, tiếp thu phương pháp tư duy giải đề nhanh." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom", desc: "Tương tác trực tiếp cấu trúc chuyên đề logic định lượng/định tính phức tạp." },
+            { time: "23:00 - 23:30", tag: "rest", title: "Tích hợp tiềm thức cuối ngày", desc: "Định hình lại toàn bộ collocations, ghi chép nhanh lỗi sai vào sổ tay và đi ngủ." }
+          ]
+        },
+        t35: {
+          title: "Khung thời gian Giai đoạn 3: Thứ Ba - Thứ Năm (Có lớp học chính khóa buổi sáng)",
+          blocks: [
+            { time: "04:30 - 04:45", tag: "rest", title: "Thiền định phục hồi đầu ngày", desc: "Chuẩn bị tâm thế vững vàng cho ngày học kéo dài." },
+            { time: "04:45 - 06:15", tag: "ielts", title: "IELTS Block 1 (Writing & Vocab)", desc: "Nạp lý thuyết cấu trúc viết nâng cao và học 10 collocations mới." },
+            { time: "06:15 - 07:15", tag: "ielts", title: "IELTS Block 2 (Daily Dictation & Error Review)", desc: "Luyện nghe chép chính tả kết hợp rà soát sâu các lỗi sai từ bài test tuần." },
+            { time: "08:00 - 10:30", tag: "rest", title: "Lớp học chính khóa buổi sáng", desc: "Hoàn thành đầy đủ các nhiệm vụ bắt buộc của chương trình phổ thông quốc gia." },
+            { time: "13:30 - 14:30", tag: "ielts", title: "Hệ thống kiểm tra ngắn (15-Minute Flash Tests)", desc: "Thiết lập phản xạ nhanh viết Introduction/Overview & Phản xạ nói Part 1 ghi âm." },
+            { time: "14:30 - 16:00", tag: "ielts", title: "IELTS Block 3 (Speaking Practice)", desc: "Luyện tập trực tiếp thực hành sâu theo hệ thống sách mẫu Kiên Luyện." },
+            { time: "16:00 - 17:15", tag: "dgnl", title: "Tự học chuyên đề bổ trợ ĐGNL", desc: "Giải quyết các tài liệu, bài tập tự luyện chuẩn bị trước cho ca tối." },
+            { time: "19:30 - 21:00", tag: "math", title: "Học thuật Toán học thêm", desc: "Giải bài tập hình học không gian hoặc liên môn tồn đọng." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom", desc: "Tập trung phân tích các dạng đề tích hợp phức tạp cùng giáo viên." },
+            { time: "23:00 - 23:30", tag: "rest", title: "Tích hợp tiềm thức cuối ngày", desc: "Tổng rà soát danh mục hành động lỗi sai trong ngày." }
+          ]
+        },
+        t7: {
+          title: "Khung thời gian Giai đoạn 3: Thứ Bảy (Khung tự học tự do lớn nhất - Ngày bản lề bứt phá)",
+          blocks: [
+            { time: "04:45 - 07:45", tag: "ielts", title: "IELTS Block 1 (Weekly Full Test)", desc: "Giải quyết trọn vẹn 1 đề Listening & Reading dưới áp lực thời gian thực tế." },
+            { time: "08:30 - 11:30", tag: "ielts", title: "IELTS Block 2 (Deep Error Analysis & Vocab Extraction)", desc: "Dành 60 phút nghe lại những câu sai, phân tích bẫy paraphrase và ghi lại từ vựng." },
+            { time: "13:30 - 15:30", tag: "math", title: "Học thuật toán nâng cao tuần", desc: "Hoàn tất toàn bộ bài tập lớn môn Toán chuẩn bị cho chu kỳ tuần kế tiếp." },
+            { time: "15:30 - 17:15", tag: "ielts", title: "IELTS Block 3 (45-Minute Milestone Test)", desc: "Luyện viết Full Task 2 nghị luận dưới áp lực + Mock Test Speaking ghi âm toàn diện 3 Parts." },
+            { time: "19:30 - 21:00", tag: "ielts", title: "IELTS Block 4 (Shadowing & Speaking Correction)", desc: "Nghe lại file ghi âm bài nói buổi chiều để tự bắt lỗi phát âm, từ nối." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom", desc: "Tham gia buổi thực hành giải đề tổng hợp cao độ." }
+          ]
+        },
+        cn: {
+          title: "Khung thời gian Giai đoạn 3: Chủ Nhật (Ngày bận các lớp học thêm cố định)",
+          blocks: [
+            { time: "04:45 - 06:15", tag: "ielts", title: "IELTS Block 1 (Vocab & Dictation Maintenance)", desc: "Ôn tập nhanh 20 từ vựng cốt lõi trong tuần, chép chính tả ngắn duy trì nhịp điệu." },
+            { time: "07:15 - 17:15", tag: "rest", title: "Lớp học thêm trực tiếp (Toán/Văn/Anh học offline cả ngày)", desc: "Lắng nghe bài giảng trên lớp, chú ý đan xen ăn uống, nghỉ trưa giữa các ca học." },
+            { time: "19:30 - 21:00", tag: "dgnl", title: "Chuẩn bị học liệu ĐGNL tuần mới", desc: "Đọc trước tài liệu nền tảng nhằm tối ưu hóa ca Zoom trong tuần." },
+            { time: "21:30 - 23:00", tag: "dgnl", title: "Lớp ĐGNL trực tuyến qua Zoom", desc: "Tham gia đầy đủ ca học tối cuối tuần." }
+          ]
+        }
+      }
+    };
+
+    // ROADMAP ENGINE
+    function filterRoadmap(type) {
+      const buttons = ['all', 'task1', 'task2'];
+      buttons.forEach(b => {
+        const btn = document.getElementById(`filter-${b}`);
+        if (btn) btn.className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 bg-slate-950 border border-slate-850";
+      });
+      
+      const activeBtn = document.getElementById(`filter-${type}`);
+      if (activeBtn) activeBtn.className = "px-3 py-1.5 rounded-lg bg-slate-800 text-white font-medium border border-slate-700";
+
+      const grid = document.getElementById('roadmap-grid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      const filtered = type === 'all' ? roadmapData : roadmapData.filter(d => d.type === type);
+
+      filtered.forEach(w => {
+        const borderClass = w.type === 'task1' ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-indigo-500/20 hover:border-indigo-500/40';
+        const tagClass = w.type === 'task1' ? 'bg-emerald-500/10 text-emerald-400' : 'bg-indigo-500/10 text-indigo-400';
+        const tagText = w.type === 'task1' ? 'Trọng tâm Task 1' : 'Trọng tâm Task 2';
+
+        grid.innerHTML += `
+          <div class="bg-slate-900 border ${borderClass} p-5 rounded-2xl shadow-xl transition-all duration-300">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono font-bold text-slate-400">TUẦN ${w.week} (${w.dates})</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${tagClass}">${tagText}</span>
+            </div>
+            <div class="space-y-3 text-xs">
+              <div>
+                <span class="text-slate-500 block font-medium">Khối Writing:</span>
+                <p class="text-slate-200 font-semibold">${w.wt1}</p>
+                <p class="text-slate-400 italic mt-0.5">${w.wp}</p>
+              </div>
+              <div>
+                <span class="text-slate-500 block font-medium">Khối Speaking & Từ vựng:</span>
+                <p class="text-slate-200 font-semibold">${w.st}</p>
+                <p class="text-slate-400 italic mt-0.5">${w.sm}</p>
+              </div>
+              <div class="pt-2 border-t border-slate-800/60">
+                <span class="text-slate-500 block font-medium mb-1">Hệ thống đánh giá định kỳ:</span>
+                <p class="text-amber-400 font-medium leading-relaxed">${w.test}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    // TIMELINE ENGINE
+    function switchSchedulePhase(phaseNum) {
+      activeSchedulePhase = phaseNum;
+      
+      for (let i = 1; i <= 3; i++) {
+        const btn = document.getElementById(`btn-phase-${i}`);
+        if (btn) {
+          if (i === phaseNum) {
+            btn.className = "px-4 py-2 text-xs font-bold rounded-lg bg-emerald-600 text-white shadow-md transition-all duration-200";
+          } else {
+            btn.className = "px-4 py-2 text-xs font-bold rounded-lg text-slate-400 hover:text-slate-200 bg-slate-950 border border-slate-850/60 transition-all duration-200";
+          }
+        }
+      }
+
+      const dayTabsContainer = document.getElementById('schedule-day-tabs');
+      if (!dayTabsContainer) return;
+
+      if (phaseNum === 1 || phaseNum === 3) {
+        dayTabsContainer.innerHTML = `
+          <button onclick="renderTimeline('t235')" id="btn-time-t235" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all">Thứ 2 - 4 - 6</button>
+          <button onclick="renderTimeline('t35')" id="btn-time-t35" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all">${phaseNum === 1 ? 'Thứ 3 - 5 (Tự học)' : 'Thứ 3 - 5 (Chính khóa)'}</button>
+          <button onclick="renderTimeline('t7')" id="btn-time-t7" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all">Thứ Bảy (Bứt phá)</button>
+          <button onclick="renderTimeline('cn')" id="btn-time-cn" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all">Chủ Nhật (Học thêm)</button>
+        `;
+        renderTimeline('t235');
+      } else if (phaseNum === 2) {
+        dayTabsContainer.innerHTML = `
+          <button onclick="renderTimeline('daily')" id="btn-time-daily" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all bg-indigo-600 text-white shadow-md">Khung Ngày Du Lịch Điển Hiện</button>
+        `;
+        renderTimeline('daily');
+      }
+    }
+
+    function renderTimeline(dayId) {
+      const container = document.getElementById('timeline-content');
+      const title = document.getElementById('timeline-title');
+      if (!container || !title) return;
+      
+      const dayTabsContainer = document.getElementById('schedule-day-tabs');
+      if (dayTabsContainer) {
+        const buttons = dayTabsContainer.getElementsByTagName('button');
+        for (let btn of buttons) {
+          btn.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-400 hover:text-slate-200 transition-all";
+        }
+      }
+
+      const activeBtn = document.getElementById(`btn-time-${dayId}`);
+      if (activeBtn) {
+        activeBtn.className = "px-4 py-2 text-xs sm:text-sm font-bold rounded-lg bg-indigo-600 text-white shadow-md transition-all";
+      }
+
+      const phaseKey = `phase${activeSchedulePhase}`;
+      const data = timelineData[phaseKey][dayId];
+      if (!data) return;
+
+      title.textContent = data.title;
+      container.innerHTML = '';
+
+      data.blocks.forEach(b => {
+        let dotColor = 'bg-slate-700';
+        let textColor = 'text-slate-200';
+        if (b.tag === 'ielts') { dotColor = 'bg-emerald-500 shadow-emerald-500/20'; textColor = 'text-emerald-400'; }
+        if (b.tag === 'math') { dotColor = 'bg-indigo-500 shadow-indigo-500/20'; textColor = 'text-indigo-400'; }
+        if (b.tag === 'dgnl') { dotColor = 'bg-amber-500 shadow-amber-500/20'; textColor = 'text-amber-400'; }
+        if (b.tag === 'rest') { dotColor = 'bg-pink-500 shadow-pink-500/20'; textColor = 'text-pink-400'; }
+
+        container.innerHTML += `
+          <div class="relative group pl-2">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-900 ${dotColor} shadow-md group-hover:scale-125 transition-transform"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <span class="text-xs font-mono font-bold ${textColor}">${b.time}</span>
+              <h4 class="text-sm font-bold text-slate-100 sm:flex-1 sm:ml-4 group-hover:text-white transition-colors">${b.title}</h4>
+            </div>
+            <p class="text-xs text-slate-400 mt-1 sm:ml-20 max-w-2xl leading-relaxed">${b.desc}</p>
+          </div>
+        `;
+      });
+    }
+
+    // TABS MANAGEMENT ENGINE
+    function switchTab(tabId) {
+      const tabs = ['overview', 'roadmap', 'schedules', 'export'];
+      tabs.forEach(t => {
+        const sect = document.getElementById(`tab-${t}`);
+        const btn = document.getElementById(`btn-tab-${t}`);
+        if (sect) sect.classList.add('hidden');
+        if (btn) {
+          btn.className = "px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 text-slate-400 hover:text-slate-200";
+        }
+      });
+
+      const activeSect = document.getElementById(`tab-${tabId}`);
+      const activeBtn = document.getElementById(`btn-tab-${tabId}`);
+      
+      if (activeSect) activeSect.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.className = "px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 bg-gradient-to-r from-slate-800 to-slate-700 text-white shadow-sm";
+      }
+
+      if (tabId === 'roadmap') filterRoadmap('all');
+      if (tabId === 'schedules') switchSchedulePhase(activeSchedulePhase);
+    }
+
+    // GOOGLE CALENDAR AUTOMATED ICS EXPORT ENGINE
+    function formatICSDate(date, hours, minutes) {
+      const y = date.getFullYear();
+      const m = String(date.getMonth() + 1).padStart(2, '0');
+      const d = String(date.getDate()).padStart(2, '0');
+      const h = String(hours).padStart(2, '0');
+      const min = String(minutes).padStart(2, '0');
+      return `${y}${m}${d}T${h}${min}00`;
+    }
+
+    function handleExportICS() {
+      try {
+        let icsContent = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//IELTS Strategic Study Dashboard//Lam 2026//VI',
+          'CALSCALE:GREGORIAN',
+          'METHOD:PUBLISH',
+          'X-WR-CALNAME:Lộ trình IELTS Cao độ 2026',
+          'X-WR-TIMEZONE:Asia/Ho_Chi_Minh'
+        ];
+
+        let startDate = new Date(2026, 5, 3); 
+        let endDate = new Date(2026, 6, 15);   
+        let cur = new Date(startDate);
+        let count = 0;
+
+        while (cur <= endDate) {
+          let dayOfWeek = cur.getDay(); 
+          let blocks = [];
+          let dStr = cur.getDate();
+          let mStr = cur.getMonth() + 1;
+          let isPhase2 = (mStr === 6 && dStr >= 13 && dStr <= 19);
+
+          if (isPhase2) {
+            blocks = [
+              { start: [5,0], end: [5,45], title: "🎯 [IELTS] Lean Vocab Vol 2 & Dictation", desc: "Nạp 10 từ vựng Kinh tế, chép chính tả nhanh sáng sớm lúc đi du lịch." },
+              { start: [17,0], end: [17,45], title: "🗣️ [IELTS] Shadowing & Speaking Part 2", desc: "Luyện nói nói đuổi và ghi âm câu trả lời chiều muộn." },
+              { start: [21,30], end: [23,0], title: "💻 [ĐGNL] Lớp Trực tuyến Zoom", desc: "Tham gia đầy đủ lớp học ĐGNL qua Zoom tối." }
+            ];
+          } else {
+            if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 5) { 
+              blocks = [
+                { start: [4,30], end: [4,45], title: "🧘 Phục hồi: Thiền định đầu ngày", desc: "Hít thở sâu kích hoạt sóng não Alpha." },
+                { start: [4,45], end: [6,15], title: "📚 [IELTS] Writing Task Core Theory", desc: "Xem bài giảng logic cấu trúc hệ thống của Kiên Luyện." },
+                { start: [6,15], end: [7,15], title: "🗣️ [IELTS] Speaking Core & Vocab", desc: "Học bài giảng Speaking + thực hành sách + collocations." },
+                { start: [7,45], end: [11,30], title: "📐 [Toán/ĐGNL] Khối tự học nâng cao", desc: "Giải toán hình học/đại số học thêm và chuẩn bị bài học." },
+                { start: [13,30], end: [15,0], title: "✍️ [IELTS] Writing Practice System", desc: "Thực hành viết bài luận hoàn chỉnh dựa trên cấu trúc đã học." },
+                { start: [15,0], end: [15,45], title: "🎧 [IELTS] Dictation & Shadowing", desc: "Luyện nghe chép chính tả tinh chỉnh âm điệu phản xạ." },
+                { start: [15,45], end: [17,15], title: "✏️ [Toán] Giải bài tập chuyên sâu", desc: "Giải khối bài tập khó của lớp trực tiếp." },
+                { start: [19,0], end: [21,0], title: "🏫 [Toán] Lớp học thêm trực tiếp", desc: "Lớp học trực tiếp nghe giảng tư duy toán học nhanh." },
+                { start: [21,30], end: [23,0], title: "💻 [ĐGNL] Lớp Trực tuyến Zoom", desc: "Học chuyên đề tích hợp logic trực tuyến." }
+              ];
+            } else if (dayOfWeek === 2 || dayOfWeek === 4) { 
+              let hasChinhKhoa = cur > new Date(2026, 5, 20);
+              blocks = [
+                { start: [4,45], end: [6,15], title: "📚 [IELTS] Writing Theory & Vocab", desc: "Nạp cấu trúc viết và collocations từ hệ thống sách mẫu." },
+                { start: [6,15], end: [7,15], title: "🔍 [IELTS] Dictation & Error Review", desc: "Chép chính tả kết hợp rà soát sâu sổ tay lỗi sai tuần." },
+                { start: [13,30], end: [14,30], title: "⏱️ [IELTS] 15-Minute Flash Tests", desc: "Kiểm tra phản xạ nhanh Intro/Overview & Speaking Part 1 ghi âm." },
+                { start: [14,30], end: [16,0], title: "🗣️ [IELTS] Luyện nói theo sách mẫu", desc: "Ứng dụng collocations thực tế vào cấu trúc câu trả lời." },
+                { start: [16,0], end: [17,15], title: "📝 [ĐGNL] Tự học bổ trợ chuyên đề", desc: "Chuẩn bị bài tập đọc trước." },
+                { start: [19,30], end: [21,0], title: "📐 [Toán] Giải quyết hình học không gian", desc: "Hoàn tất bài tập lớn môn toán tồn đọng." },
+                { start: [21,30], end: [23,0], title: "💻 [ĐGNL] Lớp Trực tuyến Zoom", desc: "Tương tác giải đề tích hợp phức tạp." }
+              ];
+              if (hasChinhKhoa) {
+                blocks.push({ start: [8,0], end: [10,30], title: "🏫 [PhổThông] Học chính khóa buổi sáng", desc: "Hoàn thành nhiệm vụ chương trình quốc gia bắt buộc." });
+              }
+            } else if (dayOfWeek === 6) { 
+              blocks = [
+                { start: [4,45], end: [7,45], title: "📝 [IELTS] Weekly Full Test (L & R)", desc: "Làm đề Listening & Reading nghiêm túc dưới áp lực thời gian." },
+                { start: [8,30], end: [11,30], title: "🔍 [IELTS] Phân tích lỗi sai sâu", desc: "Dành 60 phút nghe lại câu sai, bẫy từ vựng, ghi vào sổ tay." },
+                { start: [13,30], end: [15,30], title: "📐 [Toán] Hoàn tất bài tập nâng cao tuần", desc: "Làm sạch bài tập lớn chuẩn bị tuần mới." },
+                { start: [15,30], end: [17,15], title: "⏱️ [IELTS] 45-Minute Milestone Test", desc: "Luyện viết Full Task dưới áp lực + Mock Test Speaking ghi âm 3 Parts." },
+                { start: [19,30], end: [21,0], title: "🗣️ [IELTS] Shadowing & Speaking Correction", desc: "Nghe lại file ghi âm buổi chiều để sửa lỗi phát âm." },
+                { start: [21,30], end: [23,0], title: "💻 [ĐGNL] Lớp Thực tuyến Zoom", desc: "Buổi thực hành giải đề tổng hợp cao độ." }
+              ];
+            } else if (dayOfWeek === 0) { 
+              blocks = [
+                { start: [4,45], end: [6,15], title: "📚 [IELTS] Bảo trì Từ vựng & Dictation", desc: "Rà soát nhanh từ vựng trong tuần, nghe chép chính tả ngắn." },
+                { start: [7,15], end: [17,15], title: "🏫 [HọcThêm] Lớp học offline cả ngày", desc: "Học tập offline Toán/Văn/Anh tại trung tâm cố định." },
+                { start: [19,30], end: [21,0], title: "📝 [ĐGNL] Xem trước học liệu tuần mới", desc: "Nghiên cứu tài liệu trước nhằm tối ưu hóa ca Zoom trong tuần." },
+                { start: [21,30], end: [23,0], title: "💻 [ĐGNL] Lớp Trực tuyến Zoom", desc: "Tham gia đầy đủ ca học tối cuối tuần." }
+              ];
+            }
+          }
+
+          if (dayOfWeek !== 0) {
+            blocks.push({ start: [23,0], end: [23,30], title: "🧘 Phục hồi: Tích hợp tiềm thức cuối ngày", desc: "Rà soát lỗi sai, ghi collocations và ngủ sâu." });
+          }
+
+          blocks.forEach(b => {
+            let stamp = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+            let uniqueId = `event-ielts-2026-${count}-${Math.random().toString(36).substr(2, 5)}@lam.edu`;
+            icsContent.push('BEGIN:VEVENT');
+            icsContent.push(`UID:${uniqueId}`);
+            icsContent.push(`DTSTAMP:${stamp}`);
+            icsContent.push(`DTSTART;TZID=Asia/Ho_Chi_Minh:${formatICSDate(cur, b.start[0], b.start[1])}`);
+            icsContent.push(`DTEND;TZID=Asia/Ho_Chi_Minh:${formatICSDate(cur, b.end[0], b.end[1])}`);
+            icsContent.push(`SUMMARY:${b.title}`);
+            icsContent.push(`DESCRIPTION:${b.desc}`);
+            icsContent.push('STATUS:CONFIRMED');
+            icsContent.push('END:VEVENT');
+            count++;
+          });
+
+          cur.setDate(cur.getDate() + 1);
+        }
+
+        icsContent.push('END:VCALENDAR');
+        const finalIcsString = icsContent.join('\r\n');
+        const blob = new Blob([finalIcsString], { type: 'text/calendar;charset=utf-8' });
+        const downloadUrl = URL.createObjectURL(blob);
+        const tempLink = document.createElement('a');
+        tempLink.href = downloadUrl;
+        tempLink.setAttribute('download', `Lo_Trinh_IELTS_Cao_Do_2026.ics`);
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
+
+        const successPanel = document.getElementById('export-success-container');
+        const successMsg = document.getElementById('export-success-msg');
+        if (successMsg) {
+          successMsg.textContent = `🎉 Xuất lịch thành công! Đã tự động tạo ${count} sự kiện từ ngày 03/06 đến 15/07/2026.`;
+        }
+        if (successPanel) {
+          successPanel.classList.remove('hidden');
+          successPanel.scrollIntoView({ behavior: 'smooth' });
+        }
+      } catch (error) {
+        alert("Lỗi hệ thống khi tạo lịch: " + error.message);
+      }
+    }
+
+    // INITIALIZATION
+    window.onload = function() {
+      switchTab('overview');
+    }
+  </script>
+</body>
+</html>
